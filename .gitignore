@@ -21,3 +21,21 @@ cmd/migrate/migration/version-local/*
 # go sum
 go.sum
 config/settings.deva.yml
+
+# Development files
+.1024*
+!.1024
+.breakpoints
+
+# Node.js
+node_modules/
+dist/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
