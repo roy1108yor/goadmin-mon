@@ -8,8 +8,8 @@ settings:
     name: testApp
     # 端口号
     port: 8000 # 服务端口号
-    readtimeout: 1
-    writertimeout: 2
+    readtimeout: 3000
+    writertimeout: 2000
     # 数据权限功能开关
     enabledp: false
   logger:
@@ -27,48 +27,12 @@ settings:
     # token 过期时间 单位：秒
     timeout: 3600
   database:
-    # 数据库类型 mysql, sqlite3, postgres, sqlserver
-    # sqlserver: sqlserver://用户名:密码@地址?database=数据库名
-    driver: mysql
-    # 数据库连接字符串 mysql 缺省信息 charset=utf8&parseTime=True&loc=Local&timeout=1000ms
-    source: root_mRawBQjhOTHkCnMRapbS:DrlPPpLr@tcp(mysql.inner.clackypaas.com:3306)/goadmin?charset=utf8&parseTime=True&loc=Local&timeout=1000ms
-#  databases:
-#    'locaohost:8000':
-#      driver: mysql
-#        # 数据库连接字符串 mysql 缺省信息 charset=utf8&parseTime=True&loc=Local&timeout=1000ms
-#        source: user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8&parseTime=True&loc=Local&timeout=1000ms
-#      registers:
-#        - sources:
-#            - user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8&parseTime=True&loc=Local&timeout=1000ms
+    # 数据库类型 mysql，sqlite3， postgres
+    driver: sqlite3
+    # 数据库连接sqlite3数据文件的路径
+    source: go-admin-db.db
   gen:
     # 代码生成读取的数据库名称
     dbname: dbname
     # 代码生成是使用前端代码存放位置，需要指定到src文件夹，相对路径
     frontpath: ../go-admin-ui/src
-  extend: # 扩展项使用说明
-    demo:
-      name: data
-  cache:
-#    redis:
-#      addr: 127.0.0.1:6379
-#      password: xxxxxx
-#      db: 2
-    # key存在即可
-    memory: '' 
-  queue:
-    memory:
-      poolSize: 100
-#    redis:
-#      addr: 127.0.0.1:6379
-#      password: xxxxxx
-#      producer:
-#        streamMaxLength: 100
-#        approximateMaxLength: true
-#      consumer:
-#        visibilityTimeout: 60
-#        bufferSize: 100
-#        concurrency: 10
-#        blockingTimeout: 5
-#        reclaimInterval: 1
-  locker:
-    redis:
