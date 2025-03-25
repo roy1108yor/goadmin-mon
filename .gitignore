@@ -22,10 +22,6 @@ cmd/migrate/migration/version-local/*
 go.sum
 config/settings.deva.yml
 
-# Development files
-.1024*
-!.1024
-.breakpoints
 
 # Node.js
 node_modules/
