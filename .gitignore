@@ -36,10 +36,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Clacky-specific files
-.1024*
-!.1024
-.breakpoints
 
 # Go-specific test output
 *.out
